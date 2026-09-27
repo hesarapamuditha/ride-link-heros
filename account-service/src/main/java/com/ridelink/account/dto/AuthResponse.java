@@ -1,0 +1,83 @@
+package com.ridelink.account.dto;
+
+import com.ridelink.account.model.Role;
+
+public class AuthResponse {
+
+    private String token;
+    private String tokenType = "Bearer";
+    private String userId;
+    private String email;
+    private String fullName;
+    private Role role;
+    private long expiresInMs;
+
+    public AuthResponse() {
+    }
+
+    public AuthResponse(String token, String userId, String email, String fullName, Role role, long expiresInMs) {
+        this.token = token;
+        this.tokenType = "Bearer";
+        this.userId = userId;
+        this.email = email;
+        this.fullName = fullName;
+        this.role = role;
+        this.expiresInMs = expiresInMs;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getTokenType() {
+        return tokenType;
+    }
+
+    public void setTokenType(String tokenType) {
+        this.tokenType = tokenType;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public long getExpiresInMs() {
+        return expiresInMs;
+    }
+
+    public void setExpiresInMs(long expiresInMs) {
+        this.expiresInMs = expiresInMs;
+    }
+}
