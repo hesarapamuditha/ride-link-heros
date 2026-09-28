@@ -64,7 +64,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
 
       - name: Run Tests for ${{ matrix.service.name }}
         env:
@@ -109,7 +108,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
 
       - name: Build and Package Full Solution
         run: |
