@@ -69,8 +69,8 @@ jobs:
           SPRING_DATA_MONGODB_URI: mongodb://localhost:27017/ridelink_test_db
           JWT_SECRET: RideLinkSuperSecretSigningKeyForJwtTokensSecure2026!
         run: |
-          if [ ! -d "${{ matrix.service.dir }}" ]; then
-            echo "::notice ::Service directory '${{ matrix.service.dir }}' not present on this branch. Skipping."
+          if [ ! -f "${{ matrix.service.dir }}/pom.xml" ]; then
+            echo "::notice ::Service pom.xml '${{ matrix.service.dir }}/pom.xml' not present on this branch. Skipping."
             exit 0
           fi
           cd ${{ matrix.service.dir }}
