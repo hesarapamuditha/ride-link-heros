@@ -156,8 +156,3 @@ cd fare-payment-service && mvn test
 4. **Invalid Ride State Transition**: Trying to complete a ride before starting it (`400 Bad Request`).
 5. **No Available Driver**: Requesting a driver in an area with no available vehicles (`404 Not Found`).
 6. **Simulated Card Failure**: Submitting a credit card ending in `0000` to simulate insufficient funds (`402 Payment Required`).
-
----
-
-## 📌 Git Workflow & Commit Guidelines
-See [COMMIT_GUIDE.md](file:///Users/hesarapamuditha/Documents/ride-link-heros/COMMIT_GUIDE.md) for the exact 10-step commit roadmap for Member 2 (Driver & Vehicle Service) and all team members.
